@@ -1,16 +1,23 @@
 package com.abhay;
 
 class Bbcd {
-	static int b;
-	Bbcd(int a){
+	final int b;
+	Bbcd (int a){
 		b=a;
 		System.out.println("Bbcd param cons");
 	}
-	Bbcd(){
-		b =2;
+	private Bbcd(){
+		b = 2;
+	}
+	{
+//		b = 2;
 	}
 	static {
 		System.out.println("Bbcd Static block");
+//		b = 5;
+	}
+	static void assign (int b) {
+//		Bbcd.b = b;
 	}
 }
 
