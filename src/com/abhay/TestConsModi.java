@@ -1,23 +1,23 @@
 package com.abhay;
 
 class Bbcd {
-	final int b;
+	static final int b;
 	Bbcd (int a){
-		b=a;
+//		b=a;
 		System.out.println("Bbcd param cons");
 	}
-	private Bbcd(){
-		b = 2;
+	Bbcd(){
+//		b = 2;
 	}
 	{
 //		b = 2;
 	}
 	static {
 		System.out.println("Bbcd Static block");
-//		b = 5;
+		b = 5;
 	}
 	static void assign (int b) {
-//		Bbcd.b = b;
+//		this.b = b;
 	}
 }
 
@@ -26,7 +26,7 @@ class Abcd extends Bbcd{
 	static Abcd instance = null;
 	int b = 3;
 	
-	private Abcd() {
+	Abcd() {
 		super(3);
 		a = 0;
 		System.out.println("Abcd default cons");
@@ -51,8 +51,8 @@ class Abcd extends Bbcd{
 
 public class TestConsModi {
 	public static void main(String[] args) {
-//		Bbcd a = new Bbcd();
-		System.out.println(Abcd.instance);
+		Abcd a = new Abcd();
+		System.out.println(a);
 		System.out.println(Abcd.instance);
 		System.out.println(Abcd.instance);
 	}

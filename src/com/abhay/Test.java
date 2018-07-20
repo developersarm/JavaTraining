@@ -21,4 +21,8 @@ public class Test
         Test t = new Test();
         t.method1(5);
     }
+    
+    void msg() {
+    	method1(3);
+    }
 }

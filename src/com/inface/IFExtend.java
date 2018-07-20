@@ -52,8 +52,10 @@ class MySecondClass implements Bc{
 class IFExtend {
 	public static void main(String arg[]) {
 		Bc ob = new MyClass();
-//		MyClass a = (MyClass) ob;
+		MyClass a = (MyClass) ob;
+		System.out.println(a instanceof Bc);
 		MySecondClass b = (MySecondClass) ob;
+		System.out.println(b instanceof Bc);
 //		ob.meth1();
 //		ob.meth2();
 //		ob.meth3();

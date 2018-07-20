@@ -8,7 +8,7 @@ class Previous {
 	}
 }
 
-class Next extends Previous {
+final class Next extends Previous {
 	int i;
 	
 	void print(int i, int j) {
