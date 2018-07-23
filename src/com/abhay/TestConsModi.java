@@ -1,6 +1,11 @@
 package com.abhay;
+import java.io.*;
 
-class Bbcd {
+class Bbcd implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	static final int b;
 	Bbcd (int a){
 //		b=a;
@@ -16,12 +21,16 @@ class Bbcd {
 		System.out.println("Bbcd Static block");
 		b = 5;
 	}
-	static void assign (int b) {
+	void assign (int b) {
 //		this.b = b;
 	}
 }
 
 class Abcd extends Bbcd{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	static int a = 3;
 	static Abcd instance = null;
 	int b = 3;
@@ -44,7 +53,7 @@ class Abcd extends Bbcd{
 	Abcd(int b) {
 //		super(a);
 		this();
-		this.a = b;
+		Abcd.a = b;
 		System.out.println("Abcd param cons");
 	}
 }

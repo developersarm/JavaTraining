@@ -11,7 +11,7 @@ class Ab {
 class Bc extends Ab {
 	int k;
 	
-	void showk() {
+	void showij() {
 		System.out.println("k: " + k);
 	}
 	
@@ -36,7 +36,7 @@ public class SimpleInheritence {
 		subOb.k = 9;
 		System.out.println("Contents of subOb: ");
 		subOb.showij();
-		subOb.showk();
+//		subOb.showk();
 		System.out.println();
 		
 		System.out.println("Sum of i, j and k in subOb:");
