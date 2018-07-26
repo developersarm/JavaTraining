@@ -1,7 +1,7 @@
 package com.abhay;
 
 class Ab {
-	int i, j;
+	protected int i, j;
 	
 	void showij () {
 		System.out.println("i and j: " + i + " " + j);
@@ -21,6 +21,7 @@ class Bc extends Ab {
 }
 
 public class SimpleInheritence {
+	protected int i;
 	public static void main(String args[])	{
 		Ab superOb = new Ab();
 		Bc subOb = new Bc();
