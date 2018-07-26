@@ -11,6 +11,10 @@ interface Ab {
 	static void print() {
 		System.out.println("This is default method!");
 	}
+	
+	default void msg() {
+		
+	}
 }
 
 //B now includes meth1() and meth2() -- it adds meth3().
@@ -31,6 +35,10 @@ class MyClass implements Bc {
 	}
 	public void print() {
 		System.out.println("This is default changed!");
+	}
+	
+	public void msg() {
+		
 	}
 }
 

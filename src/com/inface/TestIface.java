@@ -8,6 +8,7 @@ abstract class Client implements Callback {
 		System.out.println("Classes that implement interfaces " + 
 							"may also define other members, too.");
 	}
+	
 }
 
 class AnotherClient extends Client implements Callback, Callfront {
