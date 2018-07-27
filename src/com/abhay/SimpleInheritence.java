@@ -2,7 +2,7 @@ package com.abhay;
 
 class Ab {
 	protected int i, j;
-	
+
 	void showij () {
 		System.out.println("i and j: " + i + " " + j);
 	}
@@ -10,10 +10,14 @@ class Ab {
 
 class Bc extends Ab {
 	int k;
+	static int b = 4;
 
+	Bc(){
+		System.out.println(b);
+		this();
+	}
 	void showij() {
 		System.out.println("k: " + k);
-		return null;
 	}
 
 	void sum() {

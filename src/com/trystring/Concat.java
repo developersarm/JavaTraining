@@ -1,4 +1,4 @@
-package com.String;
+package com.trystring;
 
 public class Concat {
 	public static void main(String[] args) {
