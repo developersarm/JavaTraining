@@ -1,13 +1,6 @@
 package com.exception;
 
-class BadFoodException extends Exception {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
-}
+class BadFoodException extends Exception {}
 
 public class MyException {
 	public static void main(String[] args) {
@@ -16,13 +9,13 @@ public class MyException {
 			e.checkFood(args);
 		}
 		catch (BadFoodException ex) {
-			
+
 		}
 		finally {
 			System.out.println("finally statement");
 		}
 	}
-	
+
 	void checkFood (String...s) throws BadFoodException{
 		boolean foodSwitch = false;
 		for(String i:s) {
