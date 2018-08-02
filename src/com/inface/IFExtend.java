@@ -1,19 +1,20 @@
 package com.inface;
 
 class flatu{
-	
+
 }
 
 //One interface can extend another.
 interface Ab {
 	void meth1();
 	void meth2();
+	
 	static void print() {
 		System.out.println("This is default method!");
 	}
-	
+
 	default void msg() {
-		
+
 	}
 }
 
@@ -36,9 +37,9 @@ class MyClass implements Bc {
 	public void print() {
 		System.out.println("This is default changed!");
 	}
-	
+
 	public void msg() {
-		
+
 	}
 }
 
