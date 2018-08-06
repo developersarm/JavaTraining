@@ -34,8 +34,8 @@ public class TestFuns {
     c2.accept(5);
     Predicate<Integer> p = (a)->a>5;
     if(p.test(6)) {System.out.println("Predicate works");}
-    Function<Integer,Integer> f1 = A::printIA;
-    Function<Integer,Integer> f2 = (a)->A.printIA(a);
+    Function<String,Integer> f1 = A::printIA;
+    Function<String,Integer> f2 = (a)->A.printIA(a);
     System.out.println(f1.apply(7));
     System.out.println(f2.apply(7));
   }
