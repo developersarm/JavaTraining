@@ -6,7 +6,7 @@ class MyOuter2 {
 
   void seeOuter(){}
 
-  void doStuff () {
+  static void doStuff () {
     String y = "doStuff method";
     abstract class Inner extends MyOuter2{
       public void seeOuter() {

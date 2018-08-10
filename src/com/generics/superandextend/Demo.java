@@ -37,11 +37,12 @@ public class Demo {
   // being referenced - it may not be able to hold an Integer.
   // You can't add anything (not Object, Number, Integer,
   // nor Double) to List<? extends Number>
-//listExtendsNumber_ListNumber.add(3);     // error - can't add Integer to *possible* List<Double>, even though it is really List<Number>
-//listExtendsNumber_ListInteger.add(3);    // error - can't add Integer to *possible* List<Double>, even though it is really List<Integer>
-//listExtendsNumber_ListDouble.add(3);     // error - can't add Integer to *possible* List<Double>, especially since it is really List<Double>
+// listExtendsNumber_ListNumber.add(new Double(3));     // error - can't add Integer to *possible* List<Double>, even though it is really List<Number>
+// listExtendsNumber_ListInteger.add(3);    // error - can't add Integer to *possible* List<Double>, even though it is really List<Integer>
+// listExtendsNumber_ListDouble.add(new Double(3.0));     // error - can't add Integer to *possible* List<Double>, especially since it is really List<Double>
 
-  listSuperNumber_ListNumber.add(3);       // ok - allowed to add Integer to List<Number> or List<Object>
+  listSuperNumber_ListNumber.add(3);
+  listSuperNumber_ListNumber.add(3.0f);       // ok - allowed to add Integer to List<Number> or List<Object>
 
   listInteger_ListInteger.add(3);          // ok - allowed to add Integer to exactly List<Integer> (duh)
 
@@ -52,5 +53,6 @@ public class Demo {
 
   listSuperInteger_ListNumber.add(3);      // ok - allowed to add Integer to List<Integer>, List<Number>, or List<Object>
   listSuperInteger_ListInteger.add(3);     // ok - allowed to add Integer to List<Integer>, List<Number>, or List<Object>
+  System.out.println("".length());
   }
 }

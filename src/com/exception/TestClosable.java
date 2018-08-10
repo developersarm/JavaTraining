@@ -20,6 +20,7 @@ class Sad implements AutoCloseable {
 public class TestClosable {
   public static void fun() throws Exception{
     try(Bad b1 = new Bad("1"); Sad s2 = new Sad("2")) {
+      // b1 = null; // implicitly final
       throw new Exception("Closing -" + 3);
     } catch (Exception e) {
       // System.out.println(e.getMessage());
