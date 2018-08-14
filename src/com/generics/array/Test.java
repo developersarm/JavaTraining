@@ -18,6 +18,14 @@ class Gen<T> {
 
 }
 
+class A {
+  <T> void fun(List<T> l) {System.out.println("A fun");}
+}
+
+class B extends A {
+  <T extends Number> void fun(List<T > l) {System.out.println("B fun");}
+}
+
 class Test {
   public static void main(String[] args) {
     // Gen<Integer> g[] = new Gen<Integer>[10];
@@ -31,5 +39,11 @@ class Test {
     i.add(6);
 
     Gen.<Number>copy(n,i);
+
+    A b = new B();
+    b.fun(i);
+
+    A a = new A();
+    a.fun(i);
   }
 }
